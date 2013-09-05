@@ -259,6 +259,7 @@
 		2BA2A5D9155544F0000F7808 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPStreamPlayer/CPStreamPlayer-Prefix.pch";
 				INFOPLIST_FILE = "CPStreamPlayer/CPStreamPlayer-Info.plist";
@@ -271,6 +272,7 @@
 		2BA2A5DA155544F0000F7808 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPStreamPlayer/CPStreamPlayer-Prefix.pch";
 				INFOPLIST_FILE = "CPStreamPlayer/CPStreamPlayer-Info.plist";

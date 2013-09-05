@@ -17,11 +17,11 @@
     BOOL isPlaying;
 }
 
-@property(nonatomic, assign) id delegate;
-@property(nonatomic, retain) NSString *artistTitle;
-@property(nonatomic, retain) NSString *songTitle;
-@property(nonatomic, retain) NSString *separatorString;
-@property(nonatomic, retain) NSString *channelTitle;
+@property(nonatomic, weak) id delegate;
+@property(nonatomic, strong) NSString *artistTitle;
+@property(nonatomic, strong) NSString *songTitle;
+@property(nonatomic, strong) NSString *separatorString;
+@property(nonatomic, strong) NSString *channelTitle;
 
 - (void)startPlay;
 - (id)initWithStream:(NSString *)aStream;

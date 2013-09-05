@@ -23,10 +23,6 @@
 
 @implementation MainViewController
 
-- (void)dealloc {
-    [streamPlayer release];
-    [super dealloc];
-}
 
 /* the following two methods are required in order to use remote control functionality */
 - (void)viewDidAppear:(BOOL)animated {
