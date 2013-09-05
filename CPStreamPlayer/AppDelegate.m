@@ -19,7 +19,7 @@
     [self.window makeKeyAndVisible];
     
     
-    [self.window setRootViewController:[[[MainViewController alloc] init] autorelease]];
+    [self.window setRootViewController:[[[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil] autorelease]];
     return YES;
 }
 

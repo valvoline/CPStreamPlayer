@@ -18,6 +18,7 @@
 		2BA2A5E215554554000F7808 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2A5E115554554000F7808 /* AVFoundation.framework */; };
 		2BA2A5E415554559000F7808 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2A5E315554559000F7808 /* AudioToolbox.framework */; };
 		2BA2A5E61555455E000F7808 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2A5E51555455E000F7808 /* MediaPlayer.framework */; };
+		5186FC3217D943F6008171D8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5186FC3117D943F6008171D8 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2BA2A5E115554554000F7808 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2BA2A5E315554559000F7808 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2BA2A5E51555455E000F7808 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5186FC3117D943F6008171D8 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				2BA2A5D4155544F0000F7808 /* AppDelegate.m */,
 				2BA2A5DE1555452B000F7808 /* MainViewController.h */,
 				2BA2A5DF1555452B000F7808 /* MainViewController.m */,
+				5186FC3117D943F6008171D8 /* MainViewController.xib */,
 				2BA2A5CB155544F0000F7808 /* Supporting Files */,
 			);
 			path = CPStreamPlayer;
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA2A5CF155544F0000F7808 /* InfoPlist.strings in Resources */,
+				5186FC3217D943F6008171D8 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +285,7 @@
 				2BA2A5DA155544F0000F7808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
