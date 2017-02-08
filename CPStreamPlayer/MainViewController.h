@@ -10,10 +10,6 @@
 #import "CPStreamPlayer.h"
 
 @interface MainViewController : UIViewController <CPStreamPlayerDelegate> {
-    UIButton *aButton;
-    UILabel *songTitle;
-    UILabel *songArtist;
-    UILabel *channel;
 }
 
 @end

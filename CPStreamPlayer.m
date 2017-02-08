@@ -39,14 +39,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [separatorString release];
-    [streamAddress release];
-    [player release];
-    [artistTitle release];
-    [songTitle release];
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark Accessor Methods
@@ -56,11 +48,11 @@
 }
 
 - (void)setArtistTitle:(NSString *)aString {
-    artistTitle = [[NSString stringWithString:aString] retain];
+    artistTitle = [NSString stringWithString:aString];
 }
 
 - (void)setSongTitle:(NSString *)aString {
-    songTitle = [[NSString stringWithString:aString] retain];
+    songTitle = [NSString stringWithString:aString];
 }
 
 - (NSString *)channelTitle {
@@ -147,7 +139,6 @@
                         [song appendString:[components objectAtIndex:i]];
                     }
                     self.songTitle = [NSString stringWithString:song];
-                    [song release];
                 }
                 [self setGlobalmetadata];
             }
@@ -168,7 +159,6 @@
                            forKey:MPMediaItemPropertyTitle];
     
     [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:metadataNowPlaying];
-    [metadataNowPlaying release];
 
     if([delegate respondsToSelector:@selector(CPStreamPlayerMetadataDidUpdated:)]) {
         [delegate performSelector:@selector(CPStreamPlayerMetadataDidUpdated:) withObject:self];

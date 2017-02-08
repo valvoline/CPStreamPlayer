@@ -9,69 +9,20 @@
 #import "MainViewController.h"
 
 @interface MainViewController () {
+    IBOutlet UIButton *aButton;
+    IBOutlet UILabel *songTitle;
+    IBOutlet UILabel *songArtist;
+    IBOutlet UILabel *channel;
+    
     CPStreamPlayer *streamPlayer;
 }
+
+- (IBAction)buttonDidPressed:(id)sender;
 
 @end
 
 @implementation MainViewController
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        streamPlayer = [[CPStreamPlayer alloc] initWithStream:@"http://voxsc1.somafm.com:3000"];
-        [streamPlayer setDelegate:self];
-    }
-    return self;
-}
-
-- (void)dealloc {
-    [streamPlayer release];
-    [super dealloc];
-}
-
-- (void)loadView {
-    UIView *contentView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [contentView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
-
-    aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [aButton setFrame:CGRectMake(0, 0, 120, 45)];
-    [aButton setTitle:@"Play" forState:UIControlStateNormal];
-    [aButton addTarget:self action:@selector(buttonDidPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [contentView addSubview:aButton];
-    [aButton setCenter:CGPointMake(160, 240)];
-    
-    songTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    [songTitle setBackgroundColor:[UIColor clearColor]];
-    [songTitle setTextColor:[UIColor whiteColor]];
-    [songTitle setShadowColor:[UIColor darkGrayColor]];
-    [songTitle setTextAlignment:UITextAlignmentCenter];
-    [contentView addSubview:songTitle];
-    [songTitle setCenter:CGPointMake(160, 60)];
-    [songTitle release];
-
-    songArtist = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    [songArtist setBackgroundColor:[UIColor clearColor]];
-    [songArtist setTextColor:[UIColor whiteColor]];
-    [songArtist setShadowColor:[UIColor darkGrayColor]];
-    [songArtist setTextAlignment:UITextAlignmentCenter];
-    [contentView addSubview:songArtist];
-    [songArtist setCenter:CGPointMake(160, 85)];
-    [songArtist release];
-
-    channel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    [channel setBackgroundColor:[UIColor clearColor]];
-    [channel setTextColor:[UIColor whiteColor]];
-    [channel setShadowColor:[UIColor darkGrayColor]];
-    [channel setTextAlignment:UITextAlignmentCenter];
-    [contentView addSubview:channel];
-    [channel setCenter:CGPointMake(160, 110)];
-    [channel release];
-    
-    
-    self.view = contentView;
-    [contentView release];
-}
 
 /* the following two methods are required in order to use remote control functionality */
 - (void)viewDidAppear:(BOOL)animated {
@@ -89,6 +40,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    streamPlayer = [[CPStreamPlayer alloc] initWithStream:@"http://voxsc1.somafm.com:3000"];
+    [streamPlayer setDelegate:self];
 }
 
 - (void)viewDidUnload
@@ -103,7 +56,7 @@
 }
 
 
-- (void)buttonDidPressed:(id)sender {
+- (IBAction)buttonDidPressed:(id)sender {
     [streamPlayer startPlay];
 }
 

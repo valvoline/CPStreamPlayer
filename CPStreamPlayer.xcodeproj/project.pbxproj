@@ -18,6 +18,8 @@
 		2BA2A5E215554554000F7808 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2A5E115554554000F7808 /* AVFoundation.framework */; };
 		2BA2A5E415554559000F7808 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2A5E315554559000F7808 /* AudioToolbox.framework */; };
 		2BA2A5E61555455E000F7808 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2A5E51555455E000F7808 /* MediaPlayer.framework */; };
+		5186FC3217D943F6008171D8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5186FC3117D943F6008171D8 /* MainViewController.xib */; };
+		5186FC3417D94780008171D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5186FC3317D94780008171D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		2BA2A5E115554554000F7808 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2BA2A5E315554559000F7808 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2BA2A5E51555455E000F7808 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5186FC3117D943F6008171D8 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		5186FC3317D94780008171D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				2BA2A5D4155544F0000F7808 /* AppDelegate.m */,
 				2BA2A5DE1555452B000F7808 /* MainViewController.h */,
 				2BA2A5DF1555452B000F7808 /* MainViewController.m */,
+				5186FC3117D943F6008171D8 /* MainViewController.xib */,
 				2BA2A5CB155544F0000F7808 /* Supporting Files */,
 			);
 			path = CPStreamPlayer;
@@ -104,6 +109,7 @@
 		2BA2A5CB155544F0000F7808 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5186FC3317D94780008171D8 /* Default-568h@2x.png */,
 				2BA2A5CC155544F0000F7808 /* CPStreamPlayer-Info.plist */,
 				2BA2A5CD155544F0000F7808 /* InfoPlist.strings */,
 				2BA2A5D0155544F0000F7808 /* main.m */,
@@ -138,7 +144,7 @@
 		2BA2A5B7155544F0000F7808 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = iPhoneSmartApps.org;
 			};
 			buildConfigurationList = 2BA2A5BA155544F0000F7808 /* Build configuration list for PBXProject "CPStreamPlayer" */;
@@ -164,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA2A5CF155544F0000F7808 /* InfoPlist.strings in Resources */,
+				5186FC3217D943F6008171D8 /* MainViewController.xib in Resources */,
+				5186FC3417D94780008171D8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +208,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -225,6 +237,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -243,9 +259,11 @@
 		2BA2A5D9155544F0000F7808 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPStreamPlayer/CPStreamPlayer-Prefix.pch";
 				INFOPLIST_FILE = "CPStreamPlayer/CPStreamPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,9 +272,11 @@
 		2BA2A5DA155544F0000F7808 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPStreamPlayer/CPStreamPlayer-Prefix.pch";
 				INFOPLIST_FILE = "CPStreamPlayer/CPStreamPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -281,6 +301,7 @@
 				2BA2A5DA155544F0000F7808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
